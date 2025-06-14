@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.almafazan.goresandoa"
     },
     "web": {
       "bundler": "metro",
@@ -43,6 +44,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8a976023-c3a7-403b-86fc-76653fbf1ded"
+      }
+    },
+    "owner": "almafazan"
   }
 }

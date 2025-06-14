@@ -1,0 +1,18 @@
+const { getDefaultConfig } = require('expo/metro-config');
+
+/** @type {import('expo/metro-config').MetroConfig} */
+const config = getDefaultConfig(__dirname, {
+  // Add this if you have issues with NativeWind
+  isCSSEnabled: true
+});
+
+// Add this section for NativeWind support
+const { resolver: { sourceExts, assetExts } } = config;
+
+config.resolver = {
+  ...config.resolver,
+  assetExts: assetExts.filter((ext) => ext !== 'svg'),
+  sourceExts: [...sourceExts, 'svg']
+};
+
+module.exports = config;
