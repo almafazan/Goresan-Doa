@@ -1,0 +1,17 @@
+import React from 'react';
+import { BannerAd, BannerAdSize } from 'react-native-google-mobile-ads';
+import { getAdMobConfig } from '../config/admob';
+
+export function AdBanner() {
+  const { bannerAdUnitId } = getAdMobConfig();
+  
+  return (
+    <BannerAd
+      unitId={bannerAdUnitId}
+      size={BannerAdSize.BANNER}
+      requestOptions={{
+        requestNonPersonalizedAdsOnly: true,
+      }}
+    />
+  );
+}
